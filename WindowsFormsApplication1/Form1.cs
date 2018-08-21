@@ -40,10 +40,15 @@ namespace WindowsFormsApplication1
             drawLine();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void drawLine()
         {
             Random randomGen = new Random();
-            myPen.Color = Color.FromArgb
+            myPen.Color = Color.FromArgb(randomGen.Next(255), randomGen.Next(255), randomGen.Next(255));
             my_angle = my_angle + Int32.Parse(numAngle.Text);
             my_length = my_length + Int32.Parse(numIncrement.Text);
 
